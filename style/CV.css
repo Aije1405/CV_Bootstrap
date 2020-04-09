@@ -1,48 +1,50 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-a{
-    text-decoration: none;
-    color: black;
-    padding: 2%;
-}
-a:hover{
-    text-decoration: underline;
-}
 
 .no-margin, body {
     margin: 0;
 }
+
 .dot {
     height: 0.7em;
-    width: 5%;
+    width: 15px;
     background-color: #FCCF26;
     border-radius: 50%;
     margin-right: 2%;
     margin-top: 0.5%;
-  }
-
-#container {
-    display: flex;
 }
 
 aside {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 90%;
     background-color: #FCCF26;
 }
-.margin-aside{
+
+.margin-aside {
     margin: 10%;
     text-align: justify;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 figure {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 75px;
 }
 
 figure>img {
-    width: 30%;
+    width: 175px;
+    height: 215px;
+    margin: -15px 0 0 0;
 }
 
 #main-page {
@@ -54,15 +56,19 @@ header {
     display: flex;
     flex-direction: column;
 }
-header > p{
+
+header>p {
     margin: -2% 0% 3%;
 }
+
 h1>span {
     color: #FCCF26;
 }
-.underline{
+
+.underline {
     border-bottom: solid #FCCF26 2px;
 }
+
 .aside-title {
     background-color: black;
     color: #FCCF26;
@@ -118,19 +124,27 @@ h1>span {
     justify-content: space-between;
 }
 
-.content>img{
+.content>img {
     height: 100%;
     margin-right: 2%;
+    width: 15px
 }
 
 .content>p {
-    width: 100%;
+    width: 35%;
 }
 
 .content>div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-left: 2%;
+}
+
+.content>.recommandations {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
 }
 
 .text-content>h5 {
@@ -141,4 +155,28 @@ h1>span {
 
 .text-content>p {
     text-align: justify;
+}
+
+/************************************************/
+
+@media screen and (min-width: 769px) {
+    #container {
+        display: flex;
+        flex-direction: row;
+    }
+    aside{
+        width: 90%;
+    }
+}
+
+/*************************************************/
+
+@media screen and (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+    }
 }
